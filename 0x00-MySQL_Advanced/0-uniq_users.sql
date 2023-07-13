@@ -1,4 +1,4 @@
---- Create a table on a database
+-- Create a table on a database
 
 CREATE TABLE  IF NOT EXISTS users (
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,

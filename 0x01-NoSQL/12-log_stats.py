@@ -7,12 +7,12 @@ conn = MongoClient()
 collection = conn.logs.nginx
 
 count = collection.count_document({})
-get = col.count_documents({"method": "GET"})
-post = col.count_documents({"method": "POST"})
-put = col.count_documents({"method": "PUT"})
-patch = col.count_documents({"method": "PATCH"})
-delete = col.count_documents({"method": "DELETE"})
-status = col.count_documents({"method": "GET", "path": "/status"})
+get = collection.count_documents({"method": "GET"})
+post = collection.count_documents({"method": "POST"})
+put = collection.count_documents({"method": "PUT"})
+patch = collection.count_documents({"method": "PATCH"})
+delete = collection.count_documents({"method": "DELETE"})
+status = collection.count_documents({"method": "GET", "path": "/status"})
 
 
 if __name__ == "__main__":

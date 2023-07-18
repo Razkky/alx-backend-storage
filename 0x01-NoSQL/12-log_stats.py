@@ -6,7 +6,7 @@ from pymongo import MongoClient
 conn = MongoClient()
 collection = conn.logs.nginx
 
-count = collection.count_document({})
+count = collection.count_documents({})
 get = collection.count_documents({"method": "GET"})
 post = collection.count_documents({"method": "POST"})
 put = collection.count_documents({"method": "PUT"})

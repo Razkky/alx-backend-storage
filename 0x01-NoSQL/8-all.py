@@ -14,5 +14,3 @@ def list_all(mongo_collection):
             collection.append(doc)
 
     return collection
-
-

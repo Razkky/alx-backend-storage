@@ -16,7 +16,7 @@ class Cache:
 
     def store(self, data: Union[str, int, bytes, float]) -> str:
         """Takes a data and generate a uuid as the key and the data as its value"""
-        key = str(uuid4())
+        key: str = str(uuid4())
         self._redis.set(key, data)
         return key
 
@@ -26,7 +26,6 @@ class Cache:
         data = self._redis.get(key)
         if fn:
             data = fn(data)
-
         return data
 
     def get_str(self, data: bytes) -> str:

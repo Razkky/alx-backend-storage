@@ -2,7 +2,7 @@
 """This script stores data in redit and return it key"""
 from uuid import uuid4
 import redis
-from typing import Union
+from typing import Union, Optional, Callable
 
 
 class Cache:
